@@ -46,7 +46,6 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "1.0.7"
 	"react-day-picker": "8.10.1"
-}
   },
   "devDependencies": {
     "@types/node": "20.6.2",
