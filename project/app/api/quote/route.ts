@@ -1,64 +1,52 @@
-
-export const dynamic = "force-dynamic";
-
-import { NextRequest, NextResponse } from 'next/server'
-import { PrismaClient } from '@prisma/client'
-
-const prisma = new PrismaClient()
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    const body = await request.json();
     const { 
       name, 
       email, 
       phone, 
       service, 
-      origin, 
-      destination, 
       date, 
       passengers, 
-      duration, 
-      additionalInfo 
-    } = body
+      origin, 
+      destination, 
+      message 
+    } = body;
 
     // Validación básica
     if (!name || !email || !service) {
       return NextResponse.json(
-        { error: 'Los campos nombre, email y servicio son obligatorios' },
+        { error: 'Faltan campos requeridos' },
         { status: 400 }
-      )
+      );
     }
 
-    // Guardar en la base de datos
-    const quoteRequest = await prisma.quoteRequest.create({
-      data: {
-        name,
-        email,
-        phone: phone || null,
-        service,
-        origin: origin || null,
-        destination: destination || null,
-        date: date || null,
-        passengers: passengers ? parseInt(passengers) : null,
-        duration: duration || null,
-        additionalInfo: additionalInfo || null,
-        status: 'pending'
-      }
-    })
+    // Simular procesamiento de presupuesto
+    console.log('Nueva solicitud de presupuesto:', {
+      name,
+      email,
+      phone,
+      service,
+      date,
+      passengers,
+      origin,
+      destination,
+      message,
+      timestamp: new Date().toISOString()
+    });
 
-    return NextResponse.json(
-      { 
-        message: 'Solicitud de presupuesto enviada correctamente. Te contactaremos en las próximas 24 horas.',
-        id: quoteRequest.id 
-      },
-      { status: 201 }
-    )
+    return NextResponse.json({
+      success: true,
+      message: 'Solicitud de presupuesto enviada correctamente. Te contactaremos en breve con los detalles.'
+    });
+
   } catch (error) {
-    console.error('Error al procesar la solicitud de presupuesto:', error)
+    console.error('Error al procesar presupuesto:', error);
     return NextResponse.json(
-      { error: 'Error interno del servidor. Por favor, inténtalo de nuevo.' },
+      { error: 'Error interno del servidor' },
       { status: 500 }
-    )
+    );
   }
 }
