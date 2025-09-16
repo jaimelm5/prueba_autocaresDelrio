@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            ¿Por qué elegir <span className="text-gradient">Autocares del Río</span>?
+            ¿Por qué elegir <span className="text-gradient">Autobuses del Río</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Más de cinco décadas de experiencia nos avalan como la empresa de confianza 
@@ -136,7 +136,7 @@ const WhyChooseUsSection = () => {
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
               src="https://thumbs.dreamstime.com/z/professional-driver-standing-near-bus-passenger-transportation-130299519.jpg"
-              alt="Conductor profesional de Autocares del Río"
+              alt="Conductor profesional de Autobuses del Río"
               fill
               className="object-cover"
             />
@@ -147,7 +147,7 @@ const WhyChooseUsSection = () => {
               Tradición y modernidad al servicio del cliente
             </h3>
             <p className="text-lg text-gray-600">
-              Desde 1970, Autocares del Río ha sido sinónimo de calidad y confianza en Toledo. 
+              Desde 1970, Autobuses del Río ha sido sinónimo de calidad y confianza en Toledo. 
               Hemos evolucionado manteniendo nuestros valores familiares y añadiendo la tecnología 
               más moderna para ofrecer el mejor servicio.
             </p>

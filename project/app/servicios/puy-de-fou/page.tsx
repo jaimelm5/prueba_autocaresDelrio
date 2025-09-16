@@ -87,8 +87,8 @@ export default function PuyDeFouPage() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://i.pinimg.com/originals/be/a2/38/bea238f03bcbca75b1efd2b2ff33c1c5.jpg"
-            alt="Puy de Fou - Parque temático"
+            src="/AUTOBUS_4.jpg"
+            alt="Autobús Del Río en excursión al Valle de los Caídos"
             fill
             className="object-cover"
           />

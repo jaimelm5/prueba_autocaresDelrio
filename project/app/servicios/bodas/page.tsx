@@ -71,7 +71,7 @@ export default function WeddingServicesPage() {
     {
       name: "Ana y Miguel",
       date: "Septiembre 2024",
-      text: "Autocares del Río hizo que nuestro día fuera aún más especial. La coordinación fue perfecta y el trato, excepcional. Lo recomendamos sin dudarlo.",
+      text: "Autobuses del Río hizo que nuestro día fuera aún más especial. La coordinación fue perfecta y el trato, excepcional. Lo recomendamos sin dudarlo.",
       rating: 5
     }
   ]
@@ -84,8 +84,8 @@ export default function WeddingServicesPage() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://i.pinimg.com/originals/f4/c1/13/f4c1132300146441892625f5106782b8.jpg"
-            alt="Servicio de bodas Autocares del Río"
+            src="/AUTOBUS1.jpg"
+            alt="Autobús Del Río - Servicio de bodas"
             fill
             className="object-cover"
           />

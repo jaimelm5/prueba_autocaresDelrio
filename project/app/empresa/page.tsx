@@ -106,7 +106,7 @@ export default function CompanyPage() {
         <div className="absolute inset-0">
           <Image
             src="https://i.ytimg.com/vi/-RTJ4akc3YI/maxresdefault.jpg"
-            alt="Historia de Autocares del Río"
+            alt="Historia de Autobuses del Río"
             fill
             className="object-cover"
           />
@@ -305,7 +305,7 @@ export default function CompanyPage() {
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
                 src="https://img.freepik.com/premium-photo/fleet-buses-parked-parking-lot-yard-delivery-company_1104566-239.jpg"
-                alt="Flota de Autocares del Río"
+                alt="Flota de Autobuses del Río"
                 fill
                 className="object-cover"
               />

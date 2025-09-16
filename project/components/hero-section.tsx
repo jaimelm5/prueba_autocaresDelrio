@@ -14,18 +14,18 @@ const HeroSection = () => {
   
   const slides = [
     {
-      image: "https://cdn.pixabay.com/photo/2023/06/02/18/49/bus-8036223_1280.jpg",
+      image: "/AUTOBUS_5.jpg",
       title: "Más de 50 años conectando Toledo con España y Portugal",
       subtitle: "Especialistas en transporte de grupos, bodas y excursiones"
     },
     {
-      image: "https://i.pinimg.com/originals/b0/da/98/b0da98555d43d0b906bee4e9fbe9dc2f.jpg",
+      image: "/AUTOBUS1.jpg", 
       title: "Tu día especial merece el mejor transporte",
       subtitle: "Servicios exclusivos para bodas y eventos únicos"
     },
     {
-      image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/ee/47/e9.jpg",
-      title: "Descubre Puy de Fou con total comodidad",
+      image: "/AUTOBUS_4.jpg",
+      title: "Descubre Puy de Fou con total comodidad", 
       subtitle: "Excursiones organizadas desde Toledo y Madrid"
     }
   ]

@@ -10,11 +10,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="bg-bus-gold-500 p-2 rounded-lg">
-                <Bus className="h-6 w-6 text-white" />
+              <div className="relative w-10 h-10">
+                <img 
+                  src="/logo-autobuses-del-rio.jpg" 
+                  alt="Autobuses del Río Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <h3 className="text-lg font-bold">Autocares del Río</h3>
+                <h3 className="text-lg font-bold">Autobuses del Río</h3>
                 <p className="text-bus-blue-200 text-sm">Desde 1970</p>
               </div>
             </div>
@@ -61,7 +65,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-bus-gold-400" />
-                <span className="text-bus-blue-200">info@autocaresdelrio.com</span>
+                <span className="text-bus-blue-200">info@autobusesdelrio.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-bus-gold-400 mt-0.5" />
@@ -99,7 +103,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="border-t border-bus-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-bus-blue-200 text-sm">
-            © 2025 Autocares del Río. Todos los derechos reservados.
+            © 2025 Autobuses del Río. Todos los derechos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/empresa" className="text-bus-blue-200 hover:text-white text-sm transition-colors">

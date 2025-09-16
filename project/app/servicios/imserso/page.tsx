@@ -339,7 +339,7 @@ export default function ImsersoPage() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic">
-                  "Llevamos años viajando con Autocares del Río y siempre nos tratan como familia. 
+                  "Llevamos años viajando con Autobuses del Río y siempre nos tratan como familia. 
                   Son muy profesionales y se preocupan por nuestro bienestar durante todo el viaje."
                 </p>
                 <div className="text-sm text-gray-500">

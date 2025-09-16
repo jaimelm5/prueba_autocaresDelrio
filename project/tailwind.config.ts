@@ -53,7 +53,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Colores específicos para Autocares del Río
+        // Colores específicos para Autobuses del Río
         'bus-blue': {
           50: '#eff6ff',
           100: '#dbeafe',

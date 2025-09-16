@@ -16,9 +16,10 @@ import {
   Shield,
   Award
 } from 'lucide-react'
-import { toast } from 'sonner'
+import { useToast } from '@/hooks/use-toast'
 
 export default function QuotePage() {
+  const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,7 +70,10 @@ export default function QuotePage() {
       const data = await response.json()
 
       if (response.ok) {
-        toast.success(data.message)
+        toast({
+          title: "¡Solicitud enviada!",
+          description: data.message,
+        })
         setFormData({
           name: '',
           email: '',
@@ -83,11 +87,19 @@ export default function QuotePage() {
           additionalInfo: ''
         })
       } else {
-        toast.error(data.error || 'Error al enviar la solicitud')
+        toast({
+          title: "Error",
+          description: data.error || 'Error al enviar la solicitud',
+          variant: "destructive",
+        })
       }
     } catch (error) {
       console.error('Error:', error)
-      toast.error('Error al enviar la solicitud. Por favor, inténtalo de nuevo.')
+      toast({
+        title: "Error",
+        description: 'Error al enviar la solicitud. Por favor, inténtalo de nuevo.',
+        variant: "destructive",
+      })
     } finally {
       setIsSubmitting(false)
     }

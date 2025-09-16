@@ -49,7 +49,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <span>info@autocaresdelrio.com</span>
+              <span>info@autobusesdelrio.com</span>
             </div>
           </div>
           <div className="text-bus-gold-400">
@@ -68,12 +68,16 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3">
-              <div className="bg-bus-blue-600 p-2 rounded-lg">
-                <Bus className="h-8 w-8 text-white" />
+              <div className="relative w-12 h-12">
+                <img 
+                  src="/logo-autobuses-del-rio.jpg" 
+                  alt="Autobuses del Río Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-bus-blue-900">
-                  Autocares del Río
+                  Autobuses del Río
                 </h1>
                 <p className="text-sm text-bus-blue-600 hidden sm:block">
                   Toledo • España • Portugal

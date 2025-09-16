@@ -16,9 +16,10 @@ import {
   Send,
   CheckCircle
 } from 'lucide-react'
-import { toast } from 'sonner'
+import { useToast } from '@/hooks/use-toast'
 
 export default function ContactPage() {
+  const { toast } = useToast()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,7 +56,10 @@ export default function ContactPage() {
       const data = await response.json()
 
       if (response.ok) {
-        toast.success(data.message)
+        toast({
+          title: "¡Mensaje enviado!",
+          description: data.message,
+        })
         setFormData({
           name: '',
           email: '',
@@ -64,11 +68,19 @@ export default function ContactPage() {
           message: ''
         })
       } else {
-        toast.error(data.error || 'Error al enviar el mensaje')
+        toast({
+          title: "Error",
+          description: data.error || 'Error al enviar el mensaje',
+          variant: "destructive",
+        })
       }
     } catch (error) {
       console.error('Error:', error)
-      toast.error('Error al enviar el mensaje. Por favor, inténtalo de nuevo.')
+      toast({
+        title: "Error",
+        description: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
+        variant: "destructive",
+      })
     } finally {
       setIsSubmitting(false)
     }

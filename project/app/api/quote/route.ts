@@ -1,52 +1,59 @@
-import { NextRequest, NextResponse } from 'next/server';
+
+export const dynamic = "force-dynamic";
+
+import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const body = await request.json()
     const { 
       name, 
       email, 
       phone, 
       service, 
-      date, 
-      passengers, 
       origin, 
       destination, 
-      message 
-    } = body;
+      date, 
+      passengers, 
+      duration, 
+      additionalInfo 
+    } = body
 
     // Validación básica
     if (!name || !email || !service) {
       return NextResponse.json(
-        { error: 'Faltan campos requeridos' },
+        { error: 'Los campos nombre, email y servicio son obligatorios' },
         { status: 400 }
-      );
+      )
     }
 
-    // Simular procesamiento de presupuesto
-    console.log('Nueva solicitud de presupuesto:', {
+    // Log the quote request (in production, this would save to database)
+    console.log('Quote request submission:', {
       name,
       email,
-      phone,
+      phone: phone || null,
       service,
-      date,
-      passengers,
-      origin,
-      destination,
-      message,
+      origin: origin || null,
+      destination: destination || null,
+      date: date || null,
+      passengers: passengers ? parseInt(passengers) : null,
+      duration: duration || null,
+      additionalInfo: additionalInfo || null,
       timestamp: new Date().toISOString()
-    });
+    })
 
-    return NextResponse.json({
-      success: true,
-      message: 'Solicitud de presupuesto enviada correctamente. Te contactaremos en breve con los detalles.'
-    });
-
-  } catch (error) {
-    console.error('Error al procesar presupuesto:', error);
     return NextResponse.json(
-      { error: 'Error interno del servidor' },
+      { 
+        message: 'Solicitud de presupuesto enviada correctamente. Te contactaremos en las próximas 24 horas.',
+        id: `quote_${Date.now()}` 
+      },
+      { status: 201 }
+    )
+  } catch (error) {
+    console.error('Error al procesar la solicitud de presupuesto:', error)
+    return NextResponse.json(
+      { error: 'Error interno del servidor. Por favor, inténtalo de nuevo.' },
       { status: 500 }
-    );
+    )
   }
 }
