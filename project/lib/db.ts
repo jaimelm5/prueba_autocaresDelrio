@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client'
+// Archivo simplificado sin Prisma
+// Para futuras integraciones de base de datos
 
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined
-}
+export const db = {
+  // Placeholder para futuras funciones de base de datos
+  connected: false,
+};
 
-export const prisma = globalForPrisma.prisma ?? new PrismaClient()
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+export default db;
